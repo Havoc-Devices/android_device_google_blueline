@@ -21,8 +21,8 @@
 # lines, aosp and du, hence its name.
 #
 
-# Include DU common configuration
-include vendor/du/config/common_full_phone.mk
+# Include Havoc common configuration
+include vendor/havoc/config/common_full_phone.mk
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
@@ -31,11 +31,19 @@ $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := du_blueline
+PRODUCT_NAME := havoc_blueline
 PRODUCT_DEVICE := blueline
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3
 PRODUCT_MANUFACTURER := Google
+
+HAVOC_BUILD_TYPE := Official
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1440
+
+# Maintainer Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=slothdabski
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="blueline" \
@@ -50,4 +58,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 BOARD_PREBUILT_VENDORIMAGE := vendor/images/blueline/vendor.img
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
