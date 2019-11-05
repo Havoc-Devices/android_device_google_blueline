@@ -48,12 +48,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="blueline" \
     TARGET_DEVICE="blueline" \
-    PRIVATE_BUILD_DESC="blueline-user 10 QP1A.191005.007 5878874 release-keys"
+    PRIVATE_BUILD_DESC="blueline-user 10 QP1A.191105.003 5899767 release-keys"
 
-BUILD_FINGERPRINT := "google/blueline/blueline:10/QP1A.191005.007/5878874:user/release-keys"
+BUILD_FINGERPRINT := "google/blueline/blueline:10/QP1A.191105.003/5899767:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=google/blueline/blueline:10/QP1A.191005.007/5878874:user/release-keys
+    ro.build.fingerprint=google/blueline/blueline:10/QP1A.191105.003/5899767:user/release-keys
 
 BOARD_PREBUILT_VENDORIMAGE := vendor/images/blueline/vendor.img
 
